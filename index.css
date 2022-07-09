@@ -1,0 +1,184 @@
+html,body{
+  
+    margin:0;
+    padding: 0;
+
+ 
+}
+
+
+   
+
+.icon_animation{
+
+animation:fab_action 1s forwards ;
+
+
+}
+@keyframes fab_action{
+
+from{transform: scale(0)};
+to{transform: scale(1.5)};
+
+
+}
+
+@keyframes fab_back_action{
+
+    from{transform: scale(0)};
+    to{transform: scale(1.5)};
+    
+    
+    }
+  
+
+      
+ 
+
+    
+
+
+
+
+
+nav>ul  {
+    
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top:0;
+    margin: 0;
+    padding: 0;
+    width: 140px;
+    background: rgb(36, 36, 36);
+    height: 100%;
+    overflow: auto;
+    left:-140px;
+    transition: 1s left;
+   
+}
+.class_open{
+
+left:0;
+
+}
+
+
+li a{
+    display:block;
+    color:white;
+    width: 100%;
+
+    padding:5% 0px 10px ;
+    text-decoration: none;
+    text-align: justify;
+    
+}
+
+
+
+li:hover{
+
+background-color:  rgb(9, 100, 197);
+
+}
+
+i,span{
+
+margin:11px 20px 10px ;
+transform: scale(1.2);
+color:rgb(255, 255, 255);
+}
+
+
+
+.fa-js{
+
+padding:11px 7px 10px ;
+}
+
+
+
+ a.active {
+   background:   rgb(56, 56, 56);
+    color: rgb(255, 255, 255);
+    font-size: 10px;
+    display:block;
+    font-size: 2.5vh;
+    padding-bottom: 50px;
+   
+    text-decoration-line: none;
+    margin-top:20px;
+}
+
+
+
+a{
+
+text-align: left;
+font-family: 'Comfortaa', cursive;
+font-size:10px;
+display: block;
+
+}
+
+.name_element_menu{
+
+animation: name_icon 0.3s forwards;
+
+font-weight:200;
+
+}
+
+@keyframes name_icon{
+
+from{color:rgb(255, 255, 255);text-shadow: 0 0 1px rgb(255, 255, 255);}
+to{color:rgb(255, 255, 255);text-shadow:  0 0 1px #ffffff,
+                                            0 0 1.4px #ffffff
+    
+}
+
+
+}
+
+ ol{
+ list-style-type: none;
+ z-index: 1000;
+ position: fixed;
+display: none;
+left:140px;
+width: 190px;
+
+padding: 0;
+background: rgb(44, 44, 44);
+border-top-right-radius: 3px;
+border-bottom-right-radius: 3px;
+
+}
+
+
+ol>li:hover{
+
+
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+
+}
+
+
+li:hover>ol{
+  
+    display:block;
+}
+ 
+ol>li>a{
+
+    text-align:center;
+    padding:23px 0px 23px ;
+    font-size: 11px;
+    }
+    
+
+
