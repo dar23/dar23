@@ -22,13 +22,10 @@ if ($conn->query($sql) === TRUE) {
   } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
   }
-  header('Location:forms.php');
+ 
+header('location:index.php');
 
 }
-
-  
-
-
 
 
 

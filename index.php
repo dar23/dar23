@@ -5,7 +5,6 @@ require('logowanie.php');
 
 
 
-
 ?>
 
 <!DOCTYPE html>
@@ -186,9 +185,26 @@ require('logowanie.php');
      </div>    
 </div>
 
+<?php
+
+require('admin.php');
+
+  $sqli = "SELECT DISTINCT * FROM posts";
+  $result=$conn->query($sqli);
 
 
 
+while($row = mysqli_fetch_array($result)){
+  echo "<tr>";
+   
+      echo "<td>" . $row['title'] . "</td>";
+      echo "<td>" . $row['articles'] . "</td>";
+      echo '<img src="main/'.$row["pictures"].'">';
+  echo "</tr>";
+
+}
+
+?>
 
 
 <script src="js/icon.js"></script>
