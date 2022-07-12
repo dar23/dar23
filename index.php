@@ -3,8 +3,6 @@
 require('logowanie.php');
 
 
-
-
 ?>
 
 <!DOCTYPE html>
@@ -16,6 +14,7 @@ require('logowanie.php');
     <link rel="stylesheet" href="style/index.css">
     <link rel="stylesheet" href="style/logowanie.css">
     <link rel="stylesheet" href="style/main_post.css">
+    <link rel="stylesheet" href="style/news.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -193,8 +192,9 @@ require('logowanie.php');
 
       <?php
 
-
+    
       require('admin.php');
+      
 
         $sqli = "SELECT DISTINCT * FROM posts";
         $result=$conn->query($sqli);
