@@ -15,7 +15,7 @@ require('logowanie.php');
     <link rel="stylesheet" href="style/hamburger.css">
     <link rel="stylesheet" href="style/index.css">
     <link rel="stylesheet" href="style/logowanie.css">
-    
+    <link rel="stylesheet" href="style/main_post.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,6 +31,12 @@ require('logowanie.php');
 
 
 
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -169,7 +175,7 @@ require('logowanie.php');
 
 <!-- główna strona -->  
 
-<div class="main">
+
     <div id="panel">
         <form method="post">
             <label for="username">Nazwa użytkownika:</label>
@@ -183,28 +189,36 @@ require('logowanie.php');
             </div>  
         </form>
      </div>    
-</div>
-
-<?php
-
-require('admin.php');
-
-  $sqli = "SELECT DISTINCT * FROM posts";
-  $result=$conn->query($sqli);
 
 
+      <?php
 
-while($row = mysqli_fetch_array($result)){
-  echo "<tr>";
-   
-      echo "<td>" . $row['title'] . "</td>";
-      echo "<td>" . $row['articles'] . "</td>";
-      echo '<img src="main/'.$row["pictures"].'">';
-  echo "</tr>";
 
-}
+      require('admin.php');
 
-?>
+        $sqli = "SELECT DISTINCT * FROM posts";
+        $result=$conn->query($sqli);
+       
+ echo '<div class="place_to_posts">';  
+
+      while($row = mysqli_fetch_array($result)){
+        echo "<div class='main_post'>";
+        
+            echo '<div class="photo">';
+            echo '<a href="news.php?id='.$row['id'].'">'.'<img src="main/'.$row["pictures"].'">'.'</a>';
+            echo '</div>';
+
+            echo "<div class='title'>" . $row['title'] . "</div>";
+            echo "<div class='text'>" . $row['articles'] . "</div>";
+            echo "</div>";
+           
+          }
+ 
+        
+
+
+   echo '</div>'; 
+      ?>
 
 
 <script src="js/icon.js"></script>
@@ -220,7 +234,6 @@ while($row = mysqli_fetch_array($result)){
 
 
 
-</div>
 
 
 

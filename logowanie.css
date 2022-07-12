@@ -1,29 +1,24 @@
 
-.main{
-
-    display: flex;
-     
-    justify-content: center;
-    margin-top: 200px;
-}
-
-
-
 #panel {
   
 
     display:none;
     width: 400px; 
     height: 244px;
-    margin: 0 auto; 
+     
     padding: 14px 0 0;
     background: #fff;
-   
+    position: absolute;
+    left:0;
+    right: 0;
+    top:0;
+    bottom:0;
+    margin:auto;
     border-bottom: none;
     border-radius: 30px;
     font: 16px calibri;
     letter-spacing: -1px;
-   
+    z-index: 1000;
     border:1px solid rgb(131, 128, 128);
     box-shadow: 1px 1px 3px rgb(117, 116, 116);
     }
