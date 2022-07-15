@@ -1,8 +1,4 @@
-<?php  require("connection.php");
-
-require('logowanie.php');
-
-
+<?php  require("connection.php"); require('logowanie.php');
 ?>
 
 <!DOCTYPE html>
@@ -18,33 +14,26 @@ require('logowanie.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/6d745535f9.js" crossorigin="anonymous"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-
-
-
-
-
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6d745535f9.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<div class="hamburger">
-<div class="hamburger_one"></div>
-<div class="hamburger_two"></div>
-<div class="hamburger_three"></div>
-</div>
+    <div class="hamburger">
+    <div class="hamburger_one"></div>
+    <div class="hamburger_two"></div>
+    <div class="hamburger_three"></div>
+    </div>
 
 
 
@@ -52,20 +41,10 @@ require('logowanie.php');
 
 <nav>
  
-   
-
-
-
-
-
- 
 <ul>
  <!--   <a href="index.php"class="active"><span class='fa fa-home'
          style="margin:10px 19px ; transform:scale(1.2);  "></span>Dariusz Hozer</a>
 -->
-
-
-
   <!---------------------------------------------------------------------------------------> 
   <li >
   <ol>
@@ -198,25 +177,26 @@ require('logowanie.php');
 
         $sqli = "SELECT DISTINCT * FROM posts";
         $result=$conn->query($sqli);
-       
+        
+
  echo '<div class="place_to_posts">';  
 
       while($row = mysqli_fetch_array($result)){
-        echo "<div class='main_post'>";
+        $rowtitle=$row['title'];
+        $rowwith=$row['articles'];
+ echo "<div class='main_post'>"
         
-            echo '<div class="photo">';
-            echo '<a href="news.php?id='.$row['id'].'">'.'<img src="main/'.$row["pictures"].'">'.'</a>';
-            echo '</div>';
-
-            echo "<div class='title'>" . $row['title'] . "</div>";
-            echo "<div class='text'>" . $row['articles'] . "</div>";
-            echo "</div>";
+            .'<div class="photo">'
+            .'<a href="news.php?id='.$row['id'].'">'.'<img src="main/'.$row["pictures"].'">'
+            ."<div class='title'>".'<p class="pe">'.mb_strimwidth("$rowtitle",0,40,"...").'</p>'. "</div>".'</a>'
+            .'</div>'
+            ."<div class='text'>" .mb_strimwidth("$rowwith",0,121,"..."). "</div>"
+            ."</div>";
            
+
           }
  
         
-
-
    echo '</div>'; 
       ?>
 
