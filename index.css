@@ -57,13 +57,30 @@ nav>ul  {
     overflow: auto;
     left:-140px;
     transition: 1s left;
-   
+   z-index: 1000;
 }
 .class_open{
 
-left:0;
 
+left:0;
 }
+
+
+.class_close{
+
+    left:-140px;
+    display:none;
+    }
+    
+@keyframes lefting {
+
+    from{left:0}
+    to{left: 4%;}
+    
+}
+
+
+
 
 
 li a{

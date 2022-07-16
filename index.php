@@ -25,6 +25,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Black+Ops+One&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Black+Ops+One&family=Staatliches&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -188,7 +194,7 @@
         
             .'<div class="photo">'
             .'<a href="news.php?id='.$row['id'].'">'.'<img src="main/'.$row["pictures"].'">'
-            ."<div class='title'>".'<p class="pe">'.mb_strimwidth("$rowtitle",0,40,"...").'</p>'. "</div>".'</a>'
+            ."<div class='title'>".'<p class="pe">'.mb_strimwidth("$rowtitle",0,35,"...").'</p>'. "</div>".'</a>'
             .'</div>'
             ."<div class='text'>" .mb_strimwidth("$rowwith",0,121,"..."). "</div>"
             ."</div>";

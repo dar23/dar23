@@ -6,11 +6,39 @@
     margin-right: auto;
     margin-top:80px;  
    flex-wrap: wrap;
-
+   width:100%;
+   
   }
 
-.main_post{
 
+
+  @keyframes lefting {
+
+    from{transform: translateX(0%);}
+    to{transform: translateX(4%);}
+    
+}
+
+@keyframes lefting1 {
+
+    from{transform: translateX(4%);}
+    to{transform: translateX(0%);}
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.main_post{
+  
     background-color: #ffffff;
     padding: 20px;
     padding-top: 50px;
@@ -64,6 +92,8 @@ position: relative;
 top:-72px;
 font-size:20px;
 font-family: 'Bebas Neue', cursive;
+font-family: 'Black Ops One', cursive;
+font-family: 'Staatliches', cursive;
 letter-spacing: 1px; 
 color:rgb(255, 255, 255);
 
