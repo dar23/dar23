@@ -26,12 +26,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Black+Ops+One&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Black+Ops+One&family=Staatliches&display=swap" rel="stylesheet">
 </head>
+
+
+
+
+
+
+
+
+
 
 <body>
 
@@ -66,12 +74,12 @@
   <li>
   
     <ol>
-        <li><a href="memy">Memy</a></li>
-        <li><a href="filmy">Filmy</a></li>
+        <li><a href="memy.php">Memy</a></li>
+        <li><a href="filmy.php">Filmy</a></li>
         <li><a href="gify">Gify</a></li>
     </ol>
   
-  <a href="humor.php"><span class="material-symbols-outlined">sentiment_satisfied</span>&nbsp;Humor</a> 
+  <a href="index.php"><span class="material-symbols-outlined">sentiment_satisfied</span>&nbsp;Humor</a> 
 
   </li>
    <!---------------------------------------------------------------------------------------> 

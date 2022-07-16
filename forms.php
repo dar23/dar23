@@ -1,5 +1,7 @@
 
-<?php require ('connection.php') ;
+<?php 
+
+require ('connection.php') ;
 require('admin.php');
 
 
@@ -18,7 +20,6 @@ require('admin.php');
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@700&display=swap" rel="stylesheet">
 
 <title>Panel admina</title>
 </head>
@@ -75,9 +76,9 @@ require('admin.php');
 
 <form method="post"  enctype="multipart/form-data">
     <div class="main">HUMOR</div>
-    <input type="text" name="title" placeholder="tytuł nagłówka"></input> 
-        <textarea type="text" name="text"></textarea>
-        <input type="file" name="file"></input> 
+    <input type="text" name="humor_title" placeholder="tytuł nagłówka"></input> 
+        <textarea type="text" name="humor_text"></textarea>
+        <input type="file" name="humor_file"></input> 
         <input type="submit" name="submit"></input> 
 </form>
 
