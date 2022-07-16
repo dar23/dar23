@@ -30,12 +30,7 @@ if ($conn->query($sql) === TRUE) {
 
 header('location:index.php');
 
-
-
 }
-
-
-
 
 
 if(isset($_POST['humor_title']) && !empty($_FILES['humor_file']['name'])){

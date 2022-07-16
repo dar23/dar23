@@ -204,7 +204,7 @@
             .'<a href="news.php?id='.$row['id'].'">'.'<img src="main/'.$row["pictures"].'">'
             ."<div class='title'>".'<p class="pe">'.mb_strimwidth("$rowtitle",0,35,"...").'</p>'. "</div>".'</a>'
             .'</div>'
-            ."<div class='text'>" .mb_strimwidth("$rowwith",0,121,"..."). "</div>"
+          
             ."</div>";
            
 
