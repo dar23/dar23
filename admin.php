@@ -6,12 +6,7 @@ if(isset($_POST['main_text'])&& !empty($_FILES['main_file']['name'])){
   $title=$_POST['main_title'];
   $article=$_POST['main_text'];
   $picture=basename($_FILES['main_file']['name']);
-
-  $title_humor=$_POST['humor_title'];
-  $article_humor=$_POST['humor_text'];
-  $picture_humor=basename($_FILES['main_file']['name']);
-
-
+  
   $direction_main="main/";
   $targetFilePath = $direction_main.$picture;
 

@@ -43,6 +43,20 @@ echo "<div class='main_post'>"
 
   
 echo '</div>'; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ?>
 
 
