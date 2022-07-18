@@ -16,48 +16,50 @@
 
 
 
-  $sql_humor = "SELECT DISTINCT * FROM humor_post";
-  $result=$conn->query($sql_humor);
+  $sql_humor_gallery = "SELECT DISTINCT * FROM humor_post";
+  $result=$conn->query($sql_humor_gallery);
   
 
-echo '<div class="place_to_posts">';  
+echo '<div class="gallery_post">';
 
-while($row = mysqli_fetch_array($result)){
-  
-    $rowtitle=$row['title'];
+while($row=mysqli_fetch_array($result)){
 
-    $rowwith=$row['articles'];
 
-echo "<div class='main_post'>"
-  
-      .'<div class="photo">'
-      ."<div class='title'>".'<p class="pe">'.mb_strimwidth("$rowtitle",0,35,"...").'</p>'. "</div>"
-      
-      .'<img src="humor_post/'.$row["pictures"].'">'
-      .'</div>'
-      ."</div>";
-     
+ echo '<img class="photo"  src="humor_post/'.$row["pictures"].'">';
+
+
+
+}
+
+echo '</div>';
+
+echo'<div class="place_big_photo">'
+
  
-      
-    }
 
-  
-echo '</div>'; 
-
-
-
-
-
-
-
-
-
-
-
-
+    
+.'</div>'
 
 
 ?>
+
+
+
+
+
+
+
+<script src="js/memy.js"></script>
+
+
+
+
+
+
+
+
+
+
 
 
 
