@@ -1,5 +1,5 @@
 <?php  require("connection.php");
-
+    
 ?>
 
 
@@ -27,18 +27,11 @@ while($row=mysqli_fetch_array($result)){
 
  echo '<img class="photo"  src="humor_post/'.$row["pictures"].'">';
 
-
-
 }
 
 echo '</div>';
 
-echo'<div class="place_big_photo">'
-
- 
-
-    
-.'</div>'
+echo'<div class="place_big_photo">'.'</div>';
 
 
 ?>

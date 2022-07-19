@@ -4,7 +4,7 @@ const photo=document.querySelectorAll('.gallery_post>.photo');
 
 photo.forEach(e=>{
 
-    e.addEventListener('mouseover', ()=>{
+    e.addEventListener('click', ()=>{
        
         const main_photo=document.querySelector('.place_big_photo');
     
