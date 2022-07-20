@@ -25,7 +25,7 @@ echo '<div class="gallery_post">';
 while($row=mysqli_fetch_array($result)){
 
 
- echo '<img class="photo"  src="humor_post/'.$row["pictures"].'">';
+ echo '<img class="photo"  src="processed/'.$row["pictures"].'">'; // zmiana ścieżki na processed
 
 }
 
