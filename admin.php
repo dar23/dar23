@@ -26,31 +26,48 @@ if ($conn->query($sql) === TRUE) {
 header('location:index.php');
 
 }
+// pobieranie obrazka i skalowanie go do rozmiarów 500 na 600 (taki będzie w obrazie głównym).
+// Następnie ustalenie w css rozmiarów mini dla obrazków galerii (pomniejszenie obrazka w css dla galerii)
 
 
 if(isset($_POST['humor_title']) && !empty($_FILES['humor_file']['name'])){
 
-  $title_humor=$_POST['humor_title'];
-  $article_humor=$_POST['humor_text'];
-  $picture_humor=basename($_FILES['humor_file']['name']);
-  $direction_main="processed/";
-  $targetFilePath = $direction_main.$picture_humor;    
+  $title_humor=$_POST['humor_title']; // pobranie tytułu 
+  $article_humor=$_POST['humor_text']; //pobranie artykułu
+  $picture_humor=basename($_FILES['humor_file']['name']); // pobranie obrazka 
+  $direction_main="processed/";  // folder w którym zapisuje się obrazek
+  $targetFilePath = $direction_main.$picture_humor;    // ścieżka zapisania obrazka
 
-  move_uploaded_file($_FILES["humor_file"]["tmp_name"], $targetFilePath);
-
-
-  $small = imagecreatetruecolor(550, 550); // docelowy zasób obrazu
-
-  $source = imagecreatefromjpeg($targetFilePath); //obrazek źródłowy
-
-  $original_dimensions = getimagesize($targetFilePath);
-  $width = $original_dimensions[0];
-  $height = $original_dimensions[1];
-
-  imagecopyresampled($small, $source, 0, 0, 0, 0, 550, 550, $width, $height);
+  move_uploaded_file($_FILES["humor_file"]["tmp_name"], $targetFilePath); // zapisywanie obrazka od źródła do miejsca docelowego
 
 
-  imagejpeg($small, 'processed/'.$picture_humor);
+ //load
+
+  $black_target = imagecreatetruecolor(400, 500); // Zwraca czarny obraz - jest to matryca
+
+  
+  $image = imagecreatefromjpeg($targetFilePath); // uchwyt do obrazka źródłowego jpg
+
+ 
+ 
+  //get new sizes
+
+  $width = imagesx($image); // pobranie szerokości 
+  $height = imagesy($image); // pobranie wysokości
+ 
+
+//resize 
+
+  imagecopyresampled($black_target, $image, 0, 0, 0, 0,400, 500,$width,$height);
+ 
+
+// output
+
+  imagejpeg($black_target, 'processed/'.$picture_humor);
+
+
+
+
 
 
   
