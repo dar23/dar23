@@ -29,17 +29,14 @@ margin:0;
 }
 
 .photo{
-width:170px;
-height: 180px;
+width:200px;
+height: 230px;
 
   margin:7px;
   box-shadow: 1px 1px 1px 1px rgb(77, 76, 76);
 
-  border:1px solid rgb(255, 255, 255);
+  border:5px solid rgb(255, 255, 255);
   }
-
-
-
 
 
 .place_big_photo{
@@ -49,13 +46,13 @@ height: 180px;
   justify-content: flex-end;
   align-items: flex-end;
   align-content: flex-end;
-  width:550px; 
-  height:600px;
+  width:auto; 
+  height:auto;
  margin-top:5%;
  margin-right: 8%;
  margin-left: 5%;
 color: black; 
-
+border:5px solid white;
 }
 
 

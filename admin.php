@@ -6,11 +6,11 @@ if(isset($_POST['main_text'])&& !empty($_FILES['main_file']['name'])){
   $title=$_POST['main_title'];
   $article=$_POST['main_text'];
   $picture=basename($_FILES['main_file']['name']);
-  
   $direction_main="main/";
   $targetFilePath = $direction_main.$picture;
 
   move_uploaded_file($_FILES["main_file"]["tmp_name"], $targetFilePath);
+
   $black_target = imagecreatetruecolor(500, 300); // Zwraca czarny obraz - jest to matryca
 
   
@@ -64,7 +64,7 @@ if(isset($_POST['humor_title']) && !empty($_FILES['humor_file']['name'])){
 
  //load
 
-  $black_target = imagecreatetruecolor(550, 600); // Zwraca czarny obraz - jest to matryca
+  $black_target = imagecreatetruecolor(500, 600); // Zwraca czarny obraz - jest to matryca
 
   
   $image = imagecreatefromjpeg($targetFilePath); // uchwyt do obrazka źródłowego jpg
@@ -79,7 +79,7 @@ if(isset($_POST['humor_title']) && !empty($_FILES['humor_file']['name'])){
 
 //resize 
 
-  imagecopyresampled($black_target, $image, 0, 0, 0, 0,550, 600,$width,$height);
+  imagecopyresampled($black_target, $image, 0, 0, 0, 0,500, 600,$width,$height);
  
 
 // output
