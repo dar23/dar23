@@ -9,12 +9,6 @@ margin:0;
 
 }
 
-
-
-
-
-
-
 .gallery_post{
 
   display: flex;
@@ -23,14 +17,14 @@ margin:0;
   justify-content: flex-start;
   align-items: flex-start ;
   align-content: flex-start  ;
-  
+  margin-left: 100px;
   padding: 40px; width: 60%;
   height:auto;
 }
 
 .photo{
-width:200px;
-height: 230px;
+width:500px;
+height:auto;
 
   margin:7px;
   box-shadow: 1px 1px 1px 1px rgb(77, 76, 76);
@@ -41,6 +35,7 @@ height: 230px;
 
 .place_big_photo{
   display: flex;
+  position:fixed;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -48,9 +43,9 @@ height: 230px;
   align-content: flex-end;
   width:auto; 
   height:auto;
- margin-top:5%;
- margin-right: 8%;
- margin-left: 5%;
+top:8%;
+right: 8%;
+ 
 color: black; 
 border:5px solid white;
 }
